@@ -7,7 +7,7 @@ public class Main {
 
     public static void main(String[] args) {
 
-        class Person{
+        class Person {
             private String name;
             private String gender;
             private double salary;
@@ -52,17 +52,17 @@ public class Main {
             }
         }
 
-       List<Person> persons = List.of(
-               new Person("Elsa", "female", 58240),
-         new Person("Linda", "female", 29850),
-        new Person("Lana", "female", 34850),
-        new Person("Hanna", "female", 31400),
-        new Person("Bella", "female", 42000),
-        new Person("Bärt", "male", 26450),
-        new Person("Erik", "male", 37900),
-        new Person("Hugo", "male", 43500),
-        new Person("Ove", "male", 19750),
-        new Person("Peter", "male", 46810)
+        List<Person> persons = List.of(
+                new Person("Elsa", "female", 58240),
+                new Person("Linda", "female", 29850),
+                new Person("Lana", "female", 34850),
+                new Person("Hanna", "female", 31400),
+                new Person("Bella", "female", 42000),
+                new Person("Bärt", "male", 26450),
+                new Person("Erik", "male", 37900),
+                new Person("Hugo", "male", 43500),
+                new Person("Ove", "male", 19750),
+                new Person("Peter", "male", 46810)
         );
 
         // skriv ut snittlönen för kvinnor och för män
@@ -84,9 +84,9 @@ public class Main {
         );
         // skriv ut den person som har högst lön
         Person bestPaid = persons
-                        .stream()
-                        .max(Comparator.comparing(Person::getSalary))
-                        .orElseThrow();
+                .stream()
+                .max(Comparator.comparing(Person::getSalary))
+                .orElseThrow();
 
         System.out.println(bestPaid);
 
@@ -98,7 +98,19 @@ public class Main {
                 .orElseThrow();
 
         System.out.println(lowPay);
+    }
 
+    // 2.	Skapa en bilfabrik, med hjälp av factory pattern
+
+    //Volvo volvo = new Volvo();
+    //Saab saab = new Saab();
+    Carfactory2 carfactory = new Carfactory2();
+    Car workingCar = carfactory.createCar(cartype.WORKING);
+
+    workingCar.carsound();
 
     }
+
+
+
 }
