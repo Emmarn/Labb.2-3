@@ -1,6 +1,6 @@
 package com.company;
 
-public enum cartype {
+public enum Cartype {
     WORKING,
     BROKEN
 }

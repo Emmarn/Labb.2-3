@@ -1,7 +1,5 @@
 package com.company;
 
-public abstract class Car {
-
+  abstract class Car {
     abstract void carsound();
-
 }

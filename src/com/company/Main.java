@@ -3,7 +3,7 @@ package com.company;
 import java.util.Comparator;
 import java.util.List;
 
-public class Main {
+public class Main{
 
     public static void main(String[] args) {
 
@@ -100,17 +100,25 @@ public class Main {
         System.out.println(lowPay);
     }
 
-    // 2.	Skapa en bilfabrik, med hjälp av factory pattern
+    //  2.	Skapa en bilfabrik, med hjälp av factory pattern
 
-    //Volvo volvo = new Volvo();
-    //Saab saab = new Saab();
+    /*
+
+    Volvo volvo = new Volvo();
+    Saab saab = new Saab();
+
     Carfactory2 carfactory = new Carfactory2();
-    Car workingCar = carfactory.createCar(cartype.WORKING);
 
-    workingCar.carsound();
+    Car workingCar = carfactory.createCar(Cartype.WORKING);
+    Car brokenCar = carfactory.createCar(Cartype.BROKEN);
 
-    }
+     brokenCar.carsound();  */
 
+    // 3.Skapa en lista av ord. Använd reguljära uttryck för plocka ut endast de ord som innehåller 2 eller fler engelska vokaler (a, e, i, o, u, y)
 
 
 }
+
+
+
+
