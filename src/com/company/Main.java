@@ -1,15 +1,24 @@
 package com.company;
 
+import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.List;
+import java.util.concurrent.ThreadFactory;
 import java.util.regex.MatchResult;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 import java.util.stream.Stream;
 
-public class Main{
 
-    public static void main(String[] args) {
+class primeNumbersCounter implements Runnable {
+    @Override
+    public void run() {
+
+    }
+
+    public class Main {
+
+        public static void main(String[] args) {
      /*
         class Person {
             private String name;
@@ -118,26 +127,32 @@ public class Main{
 
      brokenCar.carsound();  */
 
-        // 3.Skapa en lista av ord. Använd reguljära uttryck för plocka ut endast de ord
-        // som innehåller 2 eller fler engelska vokaler (a, e, i, o, u, y)
+            // 3.Skapa en lista av ord. Använd reguljära uttryck för plocka ut endast de ord
+            // som innehåller 2 eller fler engelska vokaler (a, e, i, o, u, y)
 
 
-        Pattern words = Pattern.compile("[aeiouy]{2}");
-        Stream.of("house", "no", "next", "hi", "sail", "beyond", "you")
-                .filter(word -> words.matcher(word).find())
-                .forEach(System.out::println);
+            Pattern words = Pattern.compile("[aeiouy]{2}");
+            Stream.of("house", "no", "next", "hi", "sail", "beyond", "you")
+                    .filter(word -> words.matcher(word).find())
+                    .forEach(System.out::println);
 
-        // 4.	Räkna ut antalet primtal inom intervallet 0 till 500'000. Dela upp intervallet på 2 eller flera trådar,
-        // som var för sig räknar på antalet primtal inom sin tilldelade del parallellt.
-        // Du kan t.ex. låta en tråd ta en första del (typ 0 till 350'000) och en annan tråd resten  350'001 till 500'000.
-        // Det är dock givetvis tillåtet med något eget mer avancerat och effektivt upplägg också.
+            // 4.	Räkna ut antalet primtal inom intervallet 0 till 500'000. Dela upp intervallet på 2 eller flera trådar,
+            // som var för sig räknar på antalet primtal inom sin tilldelade del parallellt.
+            // Du kan t.ex. låta en tråd ta en första del (typ 0 till 350'000) och en annan tråd resten  350'001 till 500'000.
+            // Det är dock givetvis tillåtet med något eget mer avancerat och effektivt upplägg också.   1 - n
 
+            class primeNumbers implements Runnable {
+                @Override
+                public void run() {
 
+                    Thread thread1 = new Thread();
+                    Thread thread2 = new Thread();
 
-
+                }
+            }
+        }
     }
 }
-
 
 
 
