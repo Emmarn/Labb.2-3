@@ -9,13 +9,6 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 import java.util.stream.Stream;
 
-
-class primeNumbersCounter implements Runnable {
-    @Override
-    public void run() {
-
-    }
-
     public class Main {
 
         public static void main(String[] args) {
@@ -152,7 +145,7 @@ class primeNumbersCounter implements Runnable {
             }
         }
     }
-}
+
 
 
 
