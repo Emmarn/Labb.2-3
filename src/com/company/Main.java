@@ -23,8 +23,10 @@ import java.util.stream.Stream;
             // som innehåller 2 eller fler engelska vokaler (a, e, i, o, u, y)
 
 
-            Pattern words = Pattern.compile("[aeiouy]{2}");
-                  Stream.of("house", "no", "next", "hi", "sail", "yes")
+            System.out.println("---------------------------------");
+
+            Pattern words = Pattern.compile("[aeiouy].*[aeiouy]");
+                  Stream.of("house", "no", "next", "hitta", "sail", "yes", "apa")
                  .filter(word -> words.matcher(word).find())
                  .forEach(System.out::println);
 
